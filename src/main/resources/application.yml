@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+#  服务名
+  application:
+    name: coding-edu
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mydb2?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    log-impl=org:
+      apache:
+        ibatis:
+          logging:
+            stdout:
+              StdOutImpl: org.apache.ibatis.logging.stdout.StdOutImpl
